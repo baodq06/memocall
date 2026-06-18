@@ -49,17 +49,23 @@ So you never lose access to the middle of a huge conversation — `load_session`
 
 ## Install
 
-Requires Node 18+ and the Claude Code CLI.
+Requires the Claude Code CLI (and Node 18+). One line — `npx` fetches and runs the published package:
 
 ```bash
-git clone https://github.com/baodq06/memocall.git
-cd memocall
-npm install
-npm run build
-claude mcp add --scope user memocall -- node "$(pwd)/dist/index.js"
+claude mcp add --scope user memocall -- npx -y memocall
 ```
 
 `--scope user` makes it available in every session, in every directory. Restart Claude Code (or open a new session) and ask it to list your sessions. Verify with `claude mcp list` — you should see `memocall: … ✔ Connected`.
+
+<details>
+<summary>Or run from source (for development)</summary>
+
+```bash
+git clone https://github.com/baodq06/memocall.git
+cd memocall && npm install && npm run build
+claude mcp add --scope user memocall -- node "$(pwd)/dist/index.js"
+```
+</details>
 
 ## Privacy & security
 
