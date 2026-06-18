@@ -2,7 +2,7 @@
 
 An MCP server that lets Claude Code **recall the context of your past conversations — from any project — on demand.**
 
-Claude Code can *resume* a session, but it can't pull *another* conversation's context into the one you're in, and resuming is scoped to the current directory. **MemoCall** closes that gap: ask Claude *"what was I working on?"* or *"load the session where we set up X"* and it pulls that transcript in as clean, compact Markdown — even if it lived in a totally different project.
+Claude Code can *resume* a session, but getting *another* conversation's context into the one you're in is a chore — copy-pasting exports or digging through raw transcript files by hand — and resume only sees the current directory anyway. **MemoCall** turns it into a single ask: *"what was I working on?"* or *"load the session where we set up X"*, and it pulls that transcript in as clean, compact Markdown — even from a totally different project.
 
 It's **read-only**. Claude Code already records every session to `~/.claude/projects/<project>/<id>.jsonl`; this server just reads those files, strips the noise, collapses tool calls, and hands back a readable transcript. It never writes, hooks, or touches a live session.
 
