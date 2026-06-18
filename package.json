@@ -1,0 +1,36 @@
+{
+  "name": "memocall",
+  "version": "0.1.0",
+  "description": "An MCP server that recalls past Claude Code conversations across all projects as clean, compact Markdown.",
+  "type": "module",
+  "bin": {
+    "memocall": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "smoke": "npm run build && node test/smoke-corpus.mjs",
+    "inspect": "npm run build && npx @modelcontextprotocol/inspector node dist/index.js",
+    "parse": "npm run build && node dist/parser.js"
+  },
+  "keywords": [
+    "mcp",
+    "claude-code",
+    "model-context-protocol",
+    "session",
+    "context"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0"
+  }
+}
