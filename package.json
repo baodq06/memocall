@@ -1,8 +1,14 @@
 {
   "name": "memocall",
   "version": "0.1.0",
+  "mcpName": "io.github.baodq06/memocall",
   "description": "An MCP server that recalls past Claude Code conversations across all projects as clean, compact Markdown.",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baodq06/memocall.git"
+  },
+  "homepage": "https://github.com/baodq06/memocall#readme",
   "bin": {
     "memocall": "dist/index.js"
   },
@@ -15,7 +21,11 @@
     "test": "npm run build && node --test test/*.test.mjs",
     "smoke": "npm run build && node test/smoke-corpus.mjs",
     "inspect": "npm run build && npx @modelcontextprotocol/inspector node dist/index.js",
-    "parse": "npm run build && node dist/parser.js"
+    "parse": "npm run build && node dist/parser.js",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=18"
   },
   "keywords": [
     "mcp",

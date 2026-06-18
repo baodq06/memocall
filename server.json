@@ -1,0 +1,21 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.baodq06/memocall",
+  "description": "Recall past Claude Code conversations from any project as clean, compact Markdown.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/baodq06/memocall",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "memocall",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
