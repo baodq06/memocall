@@ -52,7 +52,7 @@ So you never lose access to the middle of a huge conversation — `load_session`
 Requires Node 18+ and the Claude Code CLI.
 
 ```bash
-git clone <your-repo-url> memocall
+git clone https://github.com/baodq06/memocall.git
 cd memocall
 npm install
 npm run build
